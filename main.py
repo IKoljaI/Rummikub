@@ -8,8 +8,8 @@ listOfAllRows = []
 listOfOwnChips = []
 
 chip1 = Chip(5,"blue")
-chip2 = Chip(5,"red")
-chip3 = Chip(3, "green")
+chip2 = Chip(7,"blue")
+chip3 = Chip(3, "blue")
 
 
 listOfOwnChips.append(chip1)
@@ -31,6 +31,23 @@ for chips in list:
 
 
 print(" NEWWWw")
+
+SameRow1 = SameRow()
+
+SameRow1.addChip(chip1)
+SameRow1.addChip(chip2)
+SameRow1.addChip(chip3)
+for chips in SameRow1.row:
+    print(chips.number)
+
+
+SameRow1.removeChip(chip2)
+
+
+print("test")
+
+for chips in SameRow1.row:
+    print(chips.number)
 
 
 
