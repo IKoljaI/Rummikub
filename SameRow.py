@@ -12,7 +12,6 @@ class SameRow:
         elif 4 > len(self.row) and chip.color == self.color:
             self.row.append(chip)
 
-
         else:
             print("too many chips or chip is wrong color")
 
