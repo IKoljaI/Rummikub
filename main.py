@@ -6,10 +6,12 @@ from SameRow import SameRow
 
 listOfAllRows = []
 listOfOwnChips = []
+originalListOfOwnChips = listOfOwnChips
 
-chip1 = Chip(5,"blue")
+
+chip1 = Chip(6,"blue")
 chip2 = Chip(7,"blue")
-chip3 = Chip(3, "blue")
+chip3 = Chip(5, "blue")
 
 
 listOfOwnChips.append(chip1)
@@ -48,6 +50,23 @@ print("test")
 
 for chips in SameRow1.row:
     print(chips.number)
+
+
+streetRow1 = StreetRow()
+
+streetRow1.addChip(chip1)
+streetRow1.addChip(chip2)
+streetRow1.addChip(chip3)
+
+
+
+### SOLVER
+def solve():
+
+    for chip in listOfOwnChips:
+        for row in listOfAllRows:
+            if row.addChip(chip):
+                listOfOwnChips.remove(chip) #TODO noch nicht ausprobiert und die original liste muss auch erhalten bleiben.
 
 
 
