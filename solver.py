@@ -1,9 +1,6 @@
-from main import listOfOwnChips
-from main import listOfAllRows
-from main import chipsToRemove
-import solver
 
-def solve():
+
+def solve(listOfOwnChips,listOfAllRows,chipsToRemove):
 
     for chip in listOfOwnChips:
         for row in listOfAllRows:

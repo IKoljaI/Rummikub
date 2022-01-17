@@ -8,9 +8,11 @@ class SameRow:
         if len(self.row) == 0:
             self.row.append(chip)
             self.color = chip.color
+            return True
 
-        elif 4 > len(self.row) and chip.color != self.color:
+        elif 4 > len(self.row) and chip.color is not self.color:
             self.row.append(chip)
+            return True
 
         else:
             print("too many chips or chip is same color")
@@ -19,3 +21,4 @@ class SameRow:
         for chips in self.row:
             if chip.color == chips.color and chip.number == chips.number:
                 self.row.remove(chips)
+                return True
