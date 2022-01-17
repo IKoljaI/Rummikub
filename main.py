@@ -4,8 +4,11 @@ from chip import Chip
 from StreetRow import StreetRow
 from SameRow import SameRow
 
+
+
 listOfAllRows = []
 listOfOwnChips = []
+chipsToRemove = []
 originalListOfOwnChips = listOfOwnChips
 
 
@@ -58,15 +61,13 @@ streetRow1.addChip(chip1)
 streetRow1.addChip(chip2)
 streetRow1.addChip(chip3)
 
+solve()
+
+
+
 
 
 ### SOLVER
-def solve():
-
-    for chip in listOfOwnChips:
-        for row in listOfAllRows:
-            if row.addChip(chip):
-                listOfOwnChips.remove(chip) #TODO noch nicht ausprobiert und die original liste muss auch erhalten bleiben.
 
 
 
